@@ -1,0 +1,24 @@
+SCAPS error message #1 written on	25-10-2026 at 14:14:42
+Unspecified SCAPS error message
+Error whilst processing set command in script
+Script command: set layer1.defect.add_default 
+there are no defects defined in layer 1
+
+SCAPS error message #2 written on	25-10-2026 at 14:14:42
+Unspecified SCAPS error message
+Error whilst processing set/get command in script
+Script command: set layer1.defect1.Ntotal 1e14
+Defect number 1 out of range (should be >0 and <=0)
+
+SCAPS error message #3 written on	25-10-2026 at 14:14:42
+Unspecified SCAPS error message
+Error whilst processing set command in script
+Script command: set interface1.IFdefect.add_default 
+IF-Defect number -2 out of range (should be >0 and <= 0)
+
+SCAPS error message #4 written on	25-10-2026 at 14:14:42
+Unspecified SCAPS error message
+Error whilst processing set/get interface defect command in script
+Script command: set interface1.IFdefect1.Ntotal 1e10
+IF defect number 1 out of range (should be >0 and <= 0)
+

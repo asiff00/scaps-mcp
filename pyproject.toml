@@ -1,0 +1,50 @@
+[project]
+name = "scaps-mcp"
+version = "0.1.0"
+description = "MCP server for running SCAPS-1D solar cell simulations"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Abdullah Al Asif", email = "asif.inc.bd@gmail.com" }]
+keywords = ["scaps", "scaps-1d", "solar cell", "photovoltaics", "device simulation", "mcp"]
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = ["mcp>=2.3,<3"]
+
+[project.urls]
+Repository = "https://github.com/asiff00/scaps-mcp"
+Issues = "https://github.com/asiff00/scaps-mcp/issues"
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.8"]
+
+[project.scripts]
+scaps-mcp = "scaps_mcp.server:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.8", "matplotlib>=3.8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-m 'not scaps'"
+markers = ["scaps: requires a local SCAPS installation"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/scaps_mcp/server.py" = ["B006"]

@@ -1,0 +1,37 @@
+// command list fixture in the SCAPS scriptdescription format
+load; definitionfile; ; ; ; VALUE_TYPE_FILENAME
+load; spectrumfile; ; ; ; VALUE_TYPE_FILENAME
+action; dark; ; ; ; VALUE_TYPE_NONE
+action; light; ; ; ; VALUE_TYPE_NONE
+action; workingpoint; temperature; ; ; VALUE_TYPE_NUMBER
+action; workingpoint; voltage; ; ; VALUE_TYPE_NUMBER
+action; workingpoint; frequency; ; ; VALUE_TYPE_NUMBER
+action; intensity; ND; ; ; VALUE_TYPE_NUMBER
+action; iv; startV; ; ; VALUE_TYPE_NUMBER
+action; iv; stopV; ; ; VALUE_TYPE_NUMBER
+action; iv; increment; ; ; VALUE_TYPE_NUMBER
+action; iv; points; ; ; VALUE_TYPE_INTEGER
+action; iv; doiv; ; ; VALUE_TYPE_NONE
+action; qe; increment; ; ; VALUE_TYPE_NUMBER
+action; qe; doqe; ; ; VALUE_TYPE_NONE
+action; cv; docv; ; ; VALUE_TYPE_NONE
+action; cf; points; per; decade; VALUE_TYPE_INTEGER
+action; spectrumcutoff; on; ; ; VALUE_TYPE_NONE
+set; layer; thickness; ; ; VALUE_TYPE_NUMBER
+set; layer; NA; ; ; VALUE_TYPE_NUMBER
+set; layer; Eg; ; ; VALUE_TYPE_NUMBER
+set; layer; Eg; file ; ; VALUE_TYPE_FILENAME
+set; layer; name; ; ; VALUE_TYPE_NAME
+set; layer; add_default; ; ; VALUE_TYPE_NONE
+set; layer; absorption; file; ; VALUE_TYPE_FILENAME
+set; layer; absorptionmodel; power1; alpha1; VALUE_TYPE_NUMBER
+set; layer; defect; Ntotal; ; VALUE_TYPE_NUMBER
+set; layer; defect; singleacceptor; ; VALUE_TYPE_NONE
+set; layer; defect; duplicate; ; VALUE_TYPE_NONE
+set; interface; IFdefect; Ntotal; ; VALUE_TYPE_NUMBER
+set; contact; workfunction; ; ; VALUE_TYPE_NUMBER
+set; contact; flatband; off; ; VALUE_TYPE_NONE
+set; external; Rs; ; ; VALUE_TYPE_NUMBER
+set; numerical; Shockley-Queisser_limit; always; ; VALUE_TYPE_NONE
+set; illumination; fromleft; ; ; VALUE_TYPE_NONE
+set; errorhandling; toscreen; ; ; VALUE_TYPE_NONE

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.asiff00/scaps-mcp",
+  "title": "SCAPS-1D",
+  "description": "Design, simulate, fit and sanity-check thin-film solar cells with SCAPS-1D on your own installation.",
+  "repository": {
+    "url": "https://github.com/asiff00/scaps-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "scaps-mcp",
+      "version": "0.1.0",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "SCAPS_HOME",
+          "description": "SCAPS installation folder, the one that contains scapsXXXX.exe; found automatically in the usual locations when unset",
+          "format": "filepath",
+          "isRequired": false
+        },
+        {
+          "name": "SCAPS_TIMEOUT",
+          "description": "Seconds allowed per SCAPS run",
+          "format": "number",
+          "default": "300"
+        },
+        {
+          "name": "SCAPS_RUNS_DIR",
+          "description": "Folder that keeps run inputs and results; defaults to the user cache folder",
+          "format": "filepath"
+        }
+      ]
+    }
+  ]
+}
